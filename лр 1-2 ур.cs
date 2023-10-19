@@ -139,32 +139,23 @@
 ////}
 //// 1 уровень 9 задача
 //using System;
-//namespace ConsoleApp3
+//using System.Diagnostics.CodeAnalysis;
+
+//internal class Programm
 //{
-//    internal class Program
+//    static void Main(string[] agrs)
 //    {
-//        static void Main(string[] args)
+//        double s = 0;
+//        double cur = 1;
+//        for(int i=1; i<=6; i++)
 //        {
-//            int Factorial(int n)
-//            {
-//                if (n == 1) return 1;
-
-//                return n * Factorial(n - 1);
-//            }
-
-//            int sum = 0;
-//            int number = 0;
-
-//            for (int i = 1; i <= 6; i++)
-//            {
-//                number = (int)(Math.Pow(-1, i) * Math.Pow(5, i) / Factorial(i));
-//                sum += number;
-//            }
-//            Console.WriteLine(number);
-
+//            cur = (-1) * cur * 5 / i;
+//            s = s + cur;
 //        }
+//        Console.WriteLine(s);   
 //    }
 //}
+
 //    // 1 уровень 10 задача
 //using System;
 //{
@@ -312,22 +303,18 @@
 //}
 ////2 задача 2 уровень
 //using System;
-//class Program
+//class Programm
 //{
-//    static void Main()
+//    static void Main(string[] args)
 //    {
-//        int L = 30000;
-//        int n = 1;
 //        int p = 1;
-
-//        while (p <= L)
-//        {
-//            n++;
-//            p *= n;
-//        }
-//        n--;
-//        Console.WriteLine("Наибольшее значение n: " + n);
+//        const int l = 30000;
+//        int n = 1;
+//        for (; p * (n + 3) <= l; p = p * (n + 3), n += 3) { }
+//        Console.WriteLine(n);
 //    }
+//
+//
 //}
 //// 2 уровень 3 задача
 //using System;
@@ -349,31 +336,34 @@
 //}
 //// 2 уровень 4 задача
 //using System;
-//class Program
+//using System.Reflection.Metadata;
+//
 //{
-//    static void Main()
-//    {
-//        double sum = 0;
-//        double x = 0.9;
-//        double last_sum = 0;
-//        for (int n = 1; n <= 10000; n++)
-//        {
-//            sum += Math.Pow(x, n * 2);
-//            if (Math.Pow(x, n * 2) >= 0.0001)
-//            {
-//                last_sum = sum;
+//    internal class Program
+//   {
+//static void Main(string[] args)
+//{
+//          
+//            double sum = 0;
+//            double x = 0.9;
+//            double last_sum = 0;
+//for (int n = 1; n <= 10000; n++)
+//{
+//                for (int i = 1; i <= n * 2 - 1; i++)
+//                {
+//                    e *= x;
+//                sum += e;
+//                if (e >= 0.0001)
+//               {
+//                    last_sum = sum;
+//                }
+//                else
+//                    Console.WriteLine(last_sum);
+//                    break;
+//                }
 //            }
-
-//            if (Math.Pow(x, n * 2) < 0.0001)
-//            {
-//                Console.WriteLine(last_sum);
-//                break;
-//            }
-//        }
-
-//    }
+//     }
 //}
-
 //// 2 уровень 5 задача
 //using System;
 //double res = 0;
